@@ -1,0 +1,242 @@
+** Formulario: C:\Archivos de programa\Zonas2\GBP Zonas EPSON 12 Pulgadas (17CPI-LX300).ZON Fecha 11/07/2014
+
+** DEFINICION GENERAL DEL FORMULARIO    *****
+** Se recomienda no editar este Archivo *****
+
+Hecho con Software: Zonas.exe   Versión:2.0.4  .
+
+
+NOTA IMPORTANTE:
+Los modelo posteriores a EPSON LX-300F(RG-976)reconocen 
+nuevos headers que en la LX-300F son fijos. Si se utiliza  
+un diseño generado para estos modelos en la Impresora 
+Fiscal EPSON LX-300F(RG-976), cuándo se envián los datos 
+se producirán errores de datos inválidos, pero seleccionando 
+continuar,la impresora quedará correctamente configurada. 
+
+** Se recomienda no editar este Archivo *****
+
+** Configura el tamaño de la hoja, calculando las líneas para 1/6 de pulgada y
+** las columnas en 17 caracteres por pulgada
+** @TAMAÑO | nnnnn | Columnas | Lineas 
+@TAMAÑO|00001|136|72
+
+** Esta instruccion configura la estacion para la emision Facturas A por Main Sheet
+** no se debe eliminar
+** @PREFERENCIA | nnnnn | Impresora | Dispositivo | Hoja principal | Factura | letra | ?? 
+@PREFERENCIA|00002|P|D|M|F|A|N
+
+** Esta instruccion configura la estacion para la emision de documento no fiscal,
+** se calcula en base a 12 CPI fijos con 48 columnas como mínimo y
+** 6 LPI con 60 filas como mínimo.
+** no debe eliminarse, si es necesario se puede modificar
+** @PREFERENCIA | nnnnn | Impresora | Papel | Rollo | Tamaño | Usuario | Columnas | Filas
+@PREFERENCIA|00003|P|P|R|S|U|96|72
+
+** Seteos de CPI en Documentos No Fiscales.
+@PONEPREFERENCIA|00001|P|L|O|N|N|12
+
+** DEFINICION DE ZONAS
+
+** @ZONA |Linea de referencia (para PFBATCH) | Número de Zona | Coordenada X del punto superior Izquiero | Coordenada Y del punto superior Izquiero | Coordenada X  del punto inferior derecho | Coordenada Y punto inferior derecho
+ 
+** ZONA(010) Letra Comprobante ** Quedaría Ancho(x)=2 y Altura(y)=1
+@ZONA|00004|010|69|03|70|03
+
+** ZONA(022) Logo Opcional ** Quedaría Ancho(x)=65 y Altura(y)=1
+@ZONA|00005|022|02|03|66|03
+
+** ZONA(024) Fantasía y Razon social ** Quedaría Ancho(x)=65 y Altura(y)=3
+@ZONA|00006|024|02|04|66|06
+
+** ZONA(026) Datos Vendedor ** Quedaría Ancho(x)=65 y Altura(y)=4
+@ZONA|00007|026|02|08|66|11
+
+** ZONA(034) Nro Factura y fecha ** Quedaría Ancho(x)=63 y Altura(y)=3
+@ZONA|00008|034|73|04|135|06
+
+** ZONA(036) Cuit e impuestos ** Quedaría Ancho(x)=63 y Altura(y)=4
+@ZONA|00009|036|73|08|135|11
+
+** ZONA(042) Datos del comprador ** Quedaría Ancho(x)=69 y Altura(y)=6
+@ZONA|00010|042|02|13|70|18
+
+** ZONA(044) IVA Comprador ** Quedaría Ancho(x)=69 y Altura(y)=3
+@ZONA|00011|044|02|19|70|21
+
+** ZONA(052) CUIT Comprador ** Quedaría Ancho(x)=65 y Altura(y)=6
+@ZONA|00012|052|71|13|135|18
+
+** ZONA(054) Nro remitos ** Quedaría Ancho(x)=65 y Altura(y)=3
+@ZONA|00013|054|71|19|135|21
+
+** ZONA(060) Zona de detalle de venta ** Quedaría Ancho(x)=134 y Altura(y)=24
+@ZONA|00014|060|02|22|135|45
+
+** ZONA(061) Cantidad Item ** Quedaría Ancho(x)=13 y Altura(y)=24
+@ZONA|00015|061|02|22|14|45
+
+** ZONA(062) Descripción Item ** Quedaría Ancho(x)=64 y Altura(y)=24
+@ZONA|00016|062|16|22|79|45
+
+** ZONA(063) Precio Unitario Item ** Quedaría Ancho(x)=16 y Altura(y)=24
+@ZONA|00017|063|81|22|96|45
+
+** ZONA(064) Tasa de IVA Item ** Quedaría Ancho(x)=10 y Altura(y)=24
+@ZONA|00018|064|98|22|107|45
+
+** ZONA(065) Tasa Ajuste Variable Item ** Quedaría Ancho(x)=9 y Altura(y)=24
+@ZONA|00019|065|109|22|117|45
+
+** ZONA(066) Precio total Item ** Quedaría Ancho(x)=17 y Altura(y)=24
+@ZONA|00020|066|119|22|135|45
+
+** Esta instruccion configura el offset que se usará para imprimir los subtotales
+** debe ser menor o igual a las filas de la zona 60, por omisión se toma 
+** las filas de la zona 60
+** @PREFERENCIA | nnnnn | Impresora | Comando | Offset | 901 | izquierdo | Superior 
+@PREFERENCIA|00021|P|C|O|901|0|24
+
+** ZONA(070) Mensajes de advertencia fiscal ** Quedaría Ancho(x)=134 y Altura(y)=24
+@ZONA|00022|070|02|22|135|45
+
+** ZONA(081) Descripción Percepcion de IVA RI ** Quedaría Ancho(x)=20 y Altura(y)=29
+@ZONA|00023|081|40|22|59|50
+
+** ZONA(082) Monto Percepcion de IVA RI ** Quedaría Ancho(x)=21 y Altura(y)=29
+@ZONA|00024|082|61|22|81|50
+
+** ZONA(083) Tasa de acrecentamiento RNI ** Quedaría Ancho(x)=20 y Altura(y)=29
+@ZONA|00025|083|40|22|59|50
+
+** ZONA(084) Monto de acrecentamiento RNI ** Quedaría Ancho(x)=21 y Altura(y)=29
+@ZONA|00026|084|61|22|81|50
+
+** ZONA(085) Descr.otras percep. ** Quedaría Ancho(x)=20 y Altura(y)=29
+@ZONA|00027|085|83|22|102|50
+
+** ZONA(086) Monto otras percep. ** Quedaría Ancho(x)=14 y Altura(y)=29
+@ZONA|00028|086|104|22|117|50
+
+** ZONA(090) Zona de subtotal y cierre ** Quedaría Ancho(x)=134 y Altura(y)=29
+@ZONA|00029|090|02|22|135|50
+
+** ZONA(091) Subtotal ** Quedaría Ancho(x)=13 y Altura(y)=29
+@ZONA|00030|091|02|22|14|50
+
+** ZONA(092) Tasa de IVA ** Quedaría Ancho(x)=8 y Altura(y)=29
+@ZONA|00031|092|16|22|23|50
+
+** ZONA(093) Monto de IVA ** Quedaría Ancho(x)=14 y Altura(y)=29
+@ZONA|00032|093|25|22|38|50
+
+** ZONA(094) Percepciones de IVA ** Quedaría Ancho(x)=42 y Altura(y)=29
+@ZONA|00033|094|40|22|81|50
+
+** ZONA(095) Otras percepciones ** Quedaría Ancho(x)=35 y Altura(y)=29
+@ZONA|00034|095|83|22|117|50
+
+** ZONA(097) Conceptos no gravados ** Quedaría Ancho(x)=17 y Altura(y)=29
+@ZONA|00035|097|119|22|135|50
+
+** ZONA(100) Zona de total documento ** Quedaría Ancho(x)=134 y Altura(y)=1
+@ZONA|00036|100|02|51|135|51
+
+** ZONA(101) Título de Total documento ** Quedaría Ancho(x)=97 y Altura(y)=1
+@ZONA|00037|101|02|51|98|51
+
+** ZONA(102) Monto de Total documento ** Quedaría Ancho(x)=37 y Altura(y)=1
+@ZONA|00038|102|99|51|135|51
+
+** ZONA(110) Zona de detalle de pagos ** Quedaría Ancho(x)=134 y Altura(y)=6
+@ZONA|00039|110|02|52|135|57
+
+** ZONA(111) Descripción de Pagos ** Quedaría Ancho(x)=80 y Altura(y)=6
+@ZONA|00040|111|02|52|81|57
+
+** ZONA(112) Monto de Pagos ** Quedaría Ancho(x)=54 y Altura(y)=6
+@ZONA|00041|112|82|52|135|57
+
+** ZONA(120) Leyendas de Pie de Factura ** Quedaría Ancho(x)=134 y Altura(y)=4
+@ZONA|00042|120|02|58|135|61
+
+** ZONA(142) Logo Fiscal ** Quedaría Ancho(x)=65 y Altura(y)=6
+@ZONA|00043|142|02|62|66|67
+
+** ZONA(144) Original / Copia ** Quedaría Ancho(x)=69 y Altura(y)=6
+@ZONA|00044|144|67|62|135|67
+
+** DEFINICION DE HEADERS y TRAILERS
+
+** HEADER/TRAILER (01) Nombre de Fantasía - Vacio
+@ENCABEZADO|00045|01|
+
+** HEADER/TRAILER (02) Nombre de Fantasía - Vacio
+@ENCABEZADO|00046|02|
+
+** HEADER/TRAILER (03) Nombre de Fantasía - Vacio
+@ENCABEZADO|00047|03|
+
+** HEADER/TRAILER (04) Nombre de Fantasía - Vacio
+@ENCABEZADO|00048|04|
+
+** HEADER/TRAILER (05) Nombre de Fantasía - Vacio
+@ENCABEZADO|00049|05|
+
+** HEADER/TRAILER (11) Leyenda de pie 11
+@ENCABEZADO|00050|11|. ..
+
+** HEADER/TRAILER (12) Leyenda de pie 12
+@ENCABEZADO|00051|12|......
+
+** HEADER/TRAILER (13) Leyenda de pie 13
+@ENCABEZADO|00052|13|*12001IC04163486S*
+
+** HEADER/TRAILER (14) Leyenda de pie 14
+@ENCABEZADO|00053|14|*
+
+** HEADER/TRAILER (50) Domicilio Comercial
+@ENCABEZADO|00054|50|SAN ANTONIO 337 - CP(1276) C.A.B.A.
+
+** HEADER/TRAILER (51) Domicilio Comercial
+@ENCABEZADO|00055|51|TELEFONO: 4302-7500 / 4302-7511
+
+** HEADER/TRAILER (52) Domicilio Comercial - Vacio
+@ENCABEZADO|00056|52|
+
+** HEADER/TRAILER (53) Domicilio Fiscal - Vacio
+@ENCABEZADO|00057|53|
+
+** HEADER/TRAILER (54) Domicilio Fiscal - Vacio
+@ENCABEZADO|00058|54|
+
+** HEADER/TRAILER (55) Domicilio Fiscal - Vacio
+@ENCABEZADO|00059|55|
+
+** HEADER/TRAILER (57) Impuestos Vendedor
+@ENCABEZADO|00060|57|Ingresos Brutos: 901-388075-1
+
+** HEADER/TRAILER (58) Impuestos Vendedor - Vacio
+@ENCABEZADO|00061|58|
+
+** HEADER/TRAILER (59) Impuestos Vendedor - Vacio
+@ENCABEZADO|00062|59|
+
+** HEADER/TRAILER (60) Impuestos Vendedor - Vacio
+@ENCABEZADO|00063|60|
+
+** HEADER/TRAILER (61) Impuestos Vendedor - Vacio
+@ENCABEZADO|00064|61|
+
+** HEADER/TRAILER (62) Fecha de inicio de actividades
+@ENCABEZADO|00065|62|Inicio de actividades: 01/04/2011
+
+** HEADER/TRAILER (63) Leyendas Comerciales - Vacio
+@ENCABEZADO|00066|63|
+
+** HEADER/TRAILER (64) Leyendas Comerciales - Vacio
+@ENCABEZADO|00067|64|
+
+** HEADER/TRAILER (65) Leyendas Comerciales - Vacio
+@ENCABEZADO|00068|65|
+
